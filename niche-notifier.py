@@ -66,7 +66,6 @@ def send_email(email_content):
         'email': '<your_sender_email>'
     },
         'subject': 'Holy Cross Cemetery Niches Allocation',
-        'headers': {'Priority': 'urgent', 'Importance': 'high', 'X-Priority': '1'},
         'content': [{
             'type': 'text/plain',
             'value': email_content
