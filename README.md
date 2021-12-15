@@ -1,10 +1,12 @@
 # Niche Notifier
 Scrap niche allocation site and send email on row and column info
+
 https://vgoffice.catholic.org.hk/cemetery/niche_eng.aspx
 
-Email Example
-![email example](assets/email-sample.png)
+![](assets/email-sample.png)
+
 The time in the email content is in HKT.
+
 The code is set to get the row and column info for `Holy Cross Catholic Cemetery（Chai Wan）- Standard Niche`. You could change it.
 
 ## How to use
@@ -36,10 +38,14 @@ Receiver email at [line 57](https://github.com/agathanatasha/niche-notifier/blob
 It is set to `Holy Cross Catholic Cemetery（Chai Wan）- Standard Niche` currently. 
 
 Inspect the webpage, and get the corresponding span id for each box (morning row and column, evening row and column)
+
 morning row: https://github.com/agathanatasha/niche-notifier/blob/main/niche-notifier.py#L30
+
 morning column: https://github.com/agathanatasha/niche-notifier/blob/main/niche-notifier.py#L31
 
+
 evening row: https://github.com/agathanatasha/niche-notifier/blob/main/niche-notifier.py#L43
+
 evening column: https://github.com/agathanatasha/niche-notifier/blob/main/niche-notifier.py#L43
 
 ### Create a log file
@@ -47,6 +53,7 @@ You could create the log file wherever you want. I created my in the same direct
 
 ### set up cron job
 `crontab -e`
+
 set cron time based on local time
 The information updates Monday to Saturday at noon and 4:30pm HKT. Adjust your cron job timing based on your server's timezone. The 4:30pm updates are usually late from my experience.
 
